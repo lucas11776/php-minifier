@@ -53,9 +53,9 @@ class Minifier
         $text = $this->remove_comments($text);
 
         for($i = 0; $i < strlen($text); $i++){
-            $prev = $text[$i-1] ?? '';  // shift one unit backward
-            $current = $text[$i] ?? '';
-            $next = $text[$i+1] ?? '';  // shift one unit forward
+            $prev    = $text[$i-1] ?? '';  // shift one unit backward
+            $current = $text[$i]   ?? '';
+            $next    = $text[$i+1] ?? '';  // shift one unit forward
 
             // check if char is not new line
             if(!in_array($current, $this::NEW_LINE)){
@@ -99,7 +99,7 @@ class Minifier
 
         for($i = 0; $i < strlen($text); $i++){
             // next element
-            $next = $text[$i+1] ?? '';
+            $next    = $text[$i+1] ?? '';
             $comment = ($text[$i] ?? '') . $next;
 
             // check if current item and next are single line comment
