@@ -62,8 +62,7 @@ class Minifier
                 // check if char is not empty space
                 if($current != ' '){
                     $clean_text .= $current;
-                }
-                else{
+                }else{
                     // check if next char is not empty space
                     if($next != ' '){
                         // check if prev and next are charactors
